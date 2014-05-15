@@ -117,10 +117,12 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
     NSString* _notificationType;
 }
 
-- (NSString*)notificationType {
-    return self->_notificationType;
-}
+#pragma mark - VLReachability Objects
+static VCLReachability* _internetReachability;
+static VCLReachability* _wifiReachability;
+static NSMutableDictionary* _hostNames;
 
+#pragma mark - Class methods
 + (instancetype)reachabilityWithHostName:(NSString *)hostName
 {
 	VCLReachability* returnValue = NULL;
@@ -335,6 +337,132 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 	}
     
 	return returnValue;
+}
+
+#pragma mark - Publish Methods
+
++ (void)postNotificationTo:(NSString*)postNotificationName withReachability:(VCLReachability*)reachability {
+    [[NSNotificationCenter defaultCenter] postNotificationName: postNotificationName object: reachability];
+}
+
+#pragma mark - Subscription Methods
+
+/*
+ Observe the kNetworkReachabilityChangedNotification. When that notification is posted, the method reachabilityChanged will be called.
+ */
++ (void)subscribeToReachabilityNotificationsWithDelegate:(id<VCLReachabilitySubscriber>) delegate {
+    [[NSNotificationCenter defaultCenter] addObserver:delegate selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+}
+
+
+/*
+ Subscribe to changes in WiFI VLReachability
+ */
++ (void)unsubscribeToReachabilityNotificationsWithDelegate:(id<VCLReachabilitySubscriber>) delegate {
+    /*
+     Unobserve the kNetworkReachabilityChangedNotification. When that notification is posted, the method reachabilityChanged will be called.
+     */
+    [[NSNotificationCenter defaultCenter] removeObserver:delegate name:kReachabilityChangedNotification object:nil];
+}
+
++ (void)subscribeToReachabilityForWifiWithDelegate:(id<VCLReachabilitySubscriber>) delegate {
+    
+    // If an instance of _wifiReachability isn't created yet create one
+    _wifiReachability = [VCLReachability createOrReturnReachabilityWithReachability:_wifiReachability forReachabilityConnection:[VCLReachability reachabilityForLocalWiFi]];
+    
+    // Subscribe to change in network connectivity for wifi instance of reachability only
+    [[NSNotificationCenter defaultCenter] addObserver:delegate selector:@selector(wifiReachabilityChanged:) name:kWifiReachabilityChangedNotification object:_wifiReachability];
+    
+    // send the first notification
+    [VCLReachability postNotificationTo:kWifiReachabilityChangedNotification withReachability:_wifiReachability];
+}
+
+/*
+ Unsubscribe to changes in WiFI VLReachability
+ */
++ (void)unsubscribeToReachabilityForWifiWithDelegate:(id<VCLReachabilitySubscriber>) delegate {
+    [[NSNotificationCenter defaultCenter] removeObserver:delegate name:kWifiReachabilityChangedNotification object:_wifiReachability];
+}
+
+/*
+ Subscribe to changes in Host Name VLReachability
+ */
++ (void)subscribeToReachabilityForHostNameWithName:(NSString *)hostName delegate:(id<VCLReachabilitySubscriber>) delegate {
+    // If an instance of _hostNames isn't created yet create one
+    if (!_hostNames) {
+        _hostNames = [NSMutableDictionary new];
+    }
+    
+    // If an instance of hostName reachability isn't created yet create one
+    if(![_hostNames objectForKey:hostName]) {
+        VCLReachability* newReachability;
+        [_hostNames setObject:[VCLReachability createOrReturnReachabilityWithReachability:newReachability forReachabilityConnection:[VCLReachability reachabilityWithHostName:hostName]] forKey:hostName];
+    }
+    
+    // Subscribe to change in network connectivity for wifi instance of reachability only
+    [[NSNotificationCenter defaultCenter] addObserver:delegate selector:@selector(hostNameReachabilityChanged:) name:kHostNameReachabilityChangedNotification object:[_hostNames objectForKey:hostName]];
+    
+    // send the first notification
+    [VCLReachability postNotificationTo:kHostNameReachabilityChangedNotification withReachability:[_hostNames objectForKey:hostName]];
+}
+
+/*
+ Unsubscribe to changes in Host Name VLReachability
+ */
++ (void)unsubscribeToReachabilityForHostNameWithName:(NSString *)hostName delegate:(id<VCLReachabilitySubscriber>) delegate {
+    [[NSNotificationCenter defaultCenter] removeObserver:delegate name:kHostNameReachabilityChangedNotification object:[_hostNames objectForKey:hostName]];
+}
+
+/*
+ Subscribe to changes in Internet VLReachability
+ */
++ (void)subscribeToReachabilityForInternetConnectionWithDelegate:(id<VCLReachabilitySubscriber>) delegate {
+    // If an instance of _internetReachability isn't created yet create one
+    _internetReachability = [VCLReachability createOrReturnReachabilityWithReachability:_internetReachability forReachabilityConnection:[VCLReachability reachabilityForInternetConnection]];
+    
+    // Subscribe to change in network connectivity for internet instance of reachability only
+    [[NSNotificationCenter defaultCenter] addObserver:delegate selector:@selector(internetReachabilityChanged:) name:kInternetReachabilityChangedNotification object:_internetReachability];
+    
+    // send the first notification
+    [VCLReachability postNotificationTo:kInternetReachabilityChangedNotification withReachability:_internetReachability];
+}
+
+/*
+ Unsubscribe to changes in Internet VLReachability
+ */
++ (void)unsubscribeToReachabilityForInternetConnectionWithDelegate:(id<VCLReachabilitySubscriber>) delegate {
+    [[NSNotificationCenter defaultCenter] removeObserver:delegate name:kInternetReachabilityChangedNotification object:_internetReachability];
+}
+
+#pragma mark - Setters
+
++ (void)setHostNamesWithReachability:(VCLReachability*)reachability forHostName:(NSString*)hostName {
+    [_hostNames setObject:reachability forKey:hostName];
+}
+
++ (VCLReachability*)createOrReturnReachabilityWithReachability:(VCLReachability*)reachability forReachabilityConnection:(VCLReachability*)reachabilityConnectionType {
+    if (!reachability) {
+        reachability = reachabilityConnectionType;
+        [reachability startNotifier];
+    }
+    return reachability;
+}
+
+#pragma mark - Getters
+- (NSString*)notificationType {
+    return self->_notificationType;
+}
++ (VCLReachability*)internetReachability{
+    return _internetReachability;
+}
++ (VCLReachability*)wifiReachability{
+    return _wifiReachability;
+}
++ (NSMutableDictionary*)hostNames{
+    return _hostNames;
+}
++ (VCLReachability*)hostNameWithKey:(NSString*)hostName{
+    return [_hostNames valueForKey:hostName];
 }
 
 

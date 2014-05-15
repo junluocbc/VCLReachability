@@ -28,15 +28,15 @@ const NSString* HOST_NAME = @"cbc.ca";
     NSString *remoteHostLabelFormatString = NSLocalizedString(@"Remote Host: %@", @"Remote host label format string");
     self.remoteHostLabel.text = [NSString stringWithFormat:remoteHostLabelFormatString, HOST_NAME];
     
-    [NSObject subscribeToReachabilityForHostNameWithName:@"cbc.ca" delegate:self];
-    [NSObject subscribeToReachabilityForInternetConnectionWithDelegate:self];
-    [NSObject subscribeToReachabilityForWifiWithDelegate:self];
+    [VCLReachability subscribeToReachabilityForHostNameWithName:@"cbc.ca" delegate:self];
+    [VCLReachability subscribeToReachabilityForInternetConnectionWithDelegate:self];
+    [VCLReachability subscribeToReachabilityForWifiWithDelegate:self];
 }
 
 
 - (void)updateWithReachability:(VCLReachability *)reachability forType:(NSString*)type
 {
-    if (reachability == [NSObject hostNameWithKey:@"cbc.ca"])
+    if (reachability == [VCLReachability hostNameWithKey:@"cbc.ca"])
 	{
 		[self configureTextField:self.remoteHostStatusField imageView:self.remoteHostImageView reachability:reachability];
         NetworkStatus netStatus = [reachability currentReachabilityStatus];
@@ -56,12 +56,12 @@ const NSString* HOST_NAME = @"cbc.ca";
         self.summaryLabel.text = baseLabelText;
     }
     
-	if (reachability == [NSObject internetReachability])
+	if (reachability == [VCLReachability internetReachability])
 	{
 		[self configureTextField:self.internetConnectionStatusField imageView:self.internetConnectionImageView reachability:reachability];
 	}
     
-	if (reachability == [NSObject wifiReachability])
+	if (reachability == [VCLReachability wifiReachability])
 	{
 		[self configureTextField:self.localWiFiConnectionStatusField imageView:self.localWiFiConnectionImageView reachability:reachability];
 	}

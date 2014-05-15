@@ -13,7 +13,7 @@
 BOOL isToasting = NO;
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    [NSObject subscribeToReachabilityNotificationsWithDelegate:self];
+    [VCLReachability subscribeToReachabilityNotificationsWithDelegate:self];
 }
 
 /*

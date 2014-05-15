@@ -51,6 +51,8 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <netinet/in.h>
 
+#import "VCLReachabilitySubscriber.h"
+
 
 typedef enum : NSInteger {
 	NotReachable = 0,
@@ -69,7 +71,7 @@ extern NSString* const TYPE_INTERNET;
 extern NSString* const TYPE_HOSTNAME;
 
 
-@interface VCLReachability : NSObject
+@interface VCLReachability : NSObject 
 
 /*!
  * Use to check the reachability of a given host name.
@@ -92,11 +94,19 @@ extern NSString* const TYPE_HOSTNAME;
 + (instancetype)reachabilityForLocalWiFi;
 
 /*!
+ * Create reachability reference if it is currently not created and return the reference
+ */
++ (instancetype)createOrReturnReachabilityWithReachability:(VCLReachability*)reachability forReachabilityConnection:(VCLReachability*)reachabilityConnectionType;
+
+/*!
  * Start listening for reachability notifications on the current run loop.
  */
 - (BOOL)startNotifier;
 - (void)stopNotifier;
 
+/*!
+ * Get the current reachability status
+ */
 - (NetworkStatus)currentReachabilityStatus;
 
 /*!
@@ -104,7 +114,35 @@ extern NSString* const TYPE_HOSTNAME;
  */
 - (BOOL)connectionRequired;
 
+
+/*!
+ * Explicitly post a notification using a particular reference
+ */
++ (void)postNotificationTo:(NSString*)postNotificationName withReachability:(VCLReachability *)reachability;
+
+/*!
+ * Subscribe change it network events
+ */
++ (void)subscribeToReachabilityNotificationsWithDelegate:(id<VCLReachabilitySubscriber>) delegate;
++ (void)subscribeToReachabilityForWifiWithDelegate:(id<VCLReachabilitySubscriber>) delegate;
++ (void)subscribeToReachabilityForHostNameWithName:(NSString *)hostName delegate:(id<VCLReachabilitySubscriber>) delegate;
++ (void)subscribeToReachabilityForInternetConnectionWithDelegate:(id<VCLReachabilitySubscriber>) delegate;
+
+/*!
+ * Unsubscribe change it network events
+ */
++ (void)unsubscribeToReachabilityNotificationsWithDelegate:(id<VCLReachabilitySubscriber>) delegate;
++ (void)unsubscribeToReachabilityForWifiWithDelegate:(id<VCLReachabilitySubscriber>) delegate;
++ (void)unsubscribeToReachabilityForHostNameWithName:(NSString *)hostName delegate:(id<VCLReachabilitySubscriber>) delegate;
++ (void)unsubscribeToReachabilityForInternetConnectionWithDelegate:(id<VCLReachabilitySubscriber>) delegate;
+
+
 - (NSString*)notificationType;
++ (NSDictionary*)hostNames;
++ (VCLReachability*)internetReachability;
++ (VCLReachability*)wifiReachability;
++ (VCLReachability*)hostNameWithKey:(NSString*)hostName;
+
 
 @end
 

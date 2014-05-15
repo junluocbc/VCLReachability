@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NSObject+VCLReachabilityObject.h"
+#import "VCLReachabilitySubscriber.h"
+#import "VCLReachability.h"
 
 @interface VCLAppDelegate : UIResponder <UIApplicationDelegate, VCLReachabilitySubscriber>
 
