@@ -1,0 +1,17 @@
+PODS:
+  - CRToast (0.0.7)
+  - VCLReachability (0.1.0)
+
+DEPENDENCIES:
+  - CRToast (~> 0.0.6)
+  - VCLReachability (from `../`)
+
+EXTERNAL SOURCES:
+  VCLReachability:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CRToast: a220a2c67dce6e263a4e7bd80a711e1bf19699d0
+  VCLReachability: 8aa0d7d3db5e9db294c6c125bf1eccee0dfa597b
+
+COCOAPODS: 0.32.1

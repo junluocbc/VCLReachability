@@ -24,7 +24,7 @@ static NSMutableDictionary* _hostNames;
 /*
  Observe the kNetworkReachabilityChangedNotification. When that notification is posted, the method reachabilityChanged will be called.
  */
-+ (void)subscribeToReachabilityNotificationsWithDelegate:(id<VCLSubscribeToReachability>) delegate {
++ (void)subscribeToReachabilityNotificationsWithDelegate:(id<VCLReachabilitySubscriber>) delegate {
     [[NSNotificationCenter defaultCenter] addObserver:delegate selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
 }
 
@@ -32,14 +32,14 @@ static NSMutableDictionary* _hostNames;
 /*
  Subscribe to changes in WiFI VLReachability
  */
-+ (void)unsubscribeToReachabilityNotificationsWithDelegate:(id<VCLSubscribeToReachability>) delegate {
++ (void)unsubscribeToReachabilityNotificationsWithDelegate:(id<VCLReachabilitySubscriber>) delegate {
     /*
      Unobserve the kNetworkReachabilityChangedNotification. When that notification is posted, the method reachabilityChanged will be called.
      */
     [[NSNotificationCenter defaultCenter] removeObserver:delegate name:kReachabilityChangedNotification object:nil];
 }
 
-+ (void)subscribeToReachabilityForWifiWithDelegate:(id<VCLSubscribeToReachability>) delegate {
++ (void)subscribeToReachabilityForWifiWithDelegate:(id<VCLReachabilitySubscriber>) delegate {
     
     // If an instance of _wifiReachability isn't created yet create one
     _wifiReachability = [NSObject creatOrReturnReachabilityWithReachability:_wifiReachability forReachabilityConnection:[VCLReachability reachabilityForLocalWiFi]];
@@ -54,14 +54,14 @@ static NSMutableDictionary* _hostNames;
 /*
  Unsubscribe to changes in WiFI VLReachability
  */
-+ (void)unsubscribeToReachabilityForWifiWithDelegate:(id<VCLSubscribeToReachability>) delegate {
++ (void)unsubscribeToReachabilityForWifiWithDelegate:(id<VCLReachabilitySubscriber>) delegate {
     [[NSNotificationCenter defaultCenter] removeObserver:delegate name:kWifiReachabilityChangedNotification object:_wifiReachability];
 }
 
 /*
  Subscribe to changes in Host Name VLReachability
  */
-+ (void)subscribeToReachabilityForHostNameWithName:(NSString *)hostName delegate:(id<VCLSubscribeToReachability>) delegate {
++ (void)subscribeToReachabilityForHostNameWithName:(NSString *)hostName delegate:(id<VCLReachabilitySubscriber>) delegate {
     // If an instance of _hostNames isn't created yet create one
     if (!_hostNames) {
         _hostNames = [NSMutableDictionary new];
@@ -83,14 +83,14 @@ static NSMutableDictionary* _hostNames;
 /*
  Unsubscribe to changes in Host Name VLReachability
  */
-+ (void)unsubscribeToReachabilityForHostNameWithName:(NSString *)hostName delegate:(id<VCLSubscribeToReachability>) delegate {
++ (void)unsubscribeToReachabilityForHostNameWithName:(NSString *)hostName delegate:(id<VCLReachabilitySubscriber>) delegate {
     [[NSNotificationCenter defaultCenter] removeObserver:delegate name:kHostNameReachabilityChangedNotification object:[_hostNames objectForKey:hostName]];
 }
 
 /*
  Subscribe to changes in Internet VLReachability
  */
-+ (void)subscribeToReachabilityForInternetConnectionWithDelegate:(id<VCLSubscribeToReachability>) delegate {
++ (void)subscribeToReachabilityForInternetConnectionWithDelegate:(id<VCLReachabilitySubscriber>) delegate {
     // If an instance of _internetReachability isn't created yet create one
     _internetReachability = [NSObject creatOrReturnReachabilityWithReachability:_internetReachability forReachabilityConnection:[VCLReachability reachabilityForInternetConnection]];
         
@@ -104,7 +104,7 @@ static NSMutableDictionary* _hostNames;
 /*
  Unsubscribe to changes in Internet VLReachability
  */
-+ (void)unsubscribeToReachabilityForInternetConnectionWithDelegate:(id<VCLSubscribeToReachability>) delegate {
++ (void)unsubscribeToReachabilityForInternetConnectionWithDelegate:(id<VCLReachabilitySubscriber>) delegate {
     [[NSNotificationCenter defaultCenter] removeObserver:delegate name:kInternetReachabilityChangedNotification object:_internetReachability];
 }
 
@@ -126,7 +126,7 @@ static NSMutableDictionary* _hostNames;
     
     // If this is a generic callback
 //    if (curReach != _wifiReachability && curReach != _internetReachability && ![_hostNames objectExistsInKeys:[_hostNames allKeys] forObject:curReach]) {
-        [(id<VCLSubscribeToReachability>)self updateWithReachability:curReach forType:nil];
+        [(id<VCLReachabilitySubscriber>)self updateWithReachability:curReach forType:nil];
 //    }
 }
 
@@ -140,9 +140,9 @@ static NSMutableDictionary* _hostNames;
     
     // If a wifi specific callback is available call it
     if ([self respondsToSelector:@selector(updateWifiWithReachability:)]) {
-        [(id<VCLSubscribeToReachability>)self updateWifiWithReachability:curReach];
+        [(id<VCLReachabilitySubscriber>)self updateWifiWithReachability:curReach];
     } else {
-        [(id<VCLSubscribeToReachability>)self updateWithReachability:curReach forType:TYPE_WIFI];
+        [(id<VCLReachabilitySubscriber>)self updateWithReachability:curReach forType:TYPE_WIFI];
     }
 
 }
@@ -157,9 +157,9 @@ static NSMutableDictionary* _hostNames;
     
     // If a internet specific callback is available call it
     if ([self respondsToSelector:@selector(updateInternetWithReachability:)]) {
-        [(id<VCLSubscribeToReachability>)self updateInternetWithReachability:curReach];
+        [(id<VCLReachabilitySubscriber>)self updateInternetWithReachability:curReach];
     } else {
-        [(id<VCLSubscribeToReachability>)self updateWithReachability:curReach forType:TYPE_INTERNET];
+        [(id<VCLReachabilitySubscriber>)self updateWithReachability:curReach forType:TYPE_INTERNET];
     }
 }
 
@@ -173,9 +173,9 @@ static NSMutableDictionary* _hostNames;
     
     // If a host name specific callback is available call it
     if ([self respondsToSelector:@selector(updateHostNameWithReachability:)]) {
-        [(id<VCLSubscribeToReachability>)self updateHostNameWithReachability:curReach];
+        [(id<VCLReachabilitySubscriber>)self updateHostNameWithReachability:curReach];
     } else {
-        [(id<VCLSubscribeToReachability>)self updateWithReachability:curReach forType:TYPE_HOSTNAME];
+        [(id<VCLReachabilitySubscriber>)self updateWithReachability:curReach forType:TYPE_HOSTNAME];
     }
 }
 

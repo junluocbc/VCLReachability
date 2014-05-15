@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VCLReachability.h"
 #import "NSObject+VCLReachabilityObject.h"
 
-@interface VCLViewController : UIViewController
+@interface VCLViewController : UIViewController <VCLReachabilitySubscriber>
 
 @property (nonatomic, weak) IBOutlet UILabel* summaryLabel;
 

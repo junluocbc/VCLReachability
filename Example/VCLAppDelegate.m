@@ -19,7 +19,7 @@ BOOL isToasting = NO;
 /*
  Broadcast based on reachability object to update UI
  */
-- (void)updateWithReachability:VCLReachability *reachability forType:(NSString *)type
+- (void)updateWithReachability:(VCLReachability *)reachability forType:(NSString*)type
 {
     NetworkStatus netStatus = [reachability currentReachabilityStatus];
     

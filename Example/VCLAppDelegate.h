@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NSObject+VCLReachabilityObject.h"
 
-@interface VCLAppDelegate : UIResponder <UIApplicationDelegate>
+@interface VCLAppDelegate : UIResponder <UIApplicationDelegate, VCLReachabilitySubscriber>
 
 @property (strong, nonatomic) UIWindow *window;
 

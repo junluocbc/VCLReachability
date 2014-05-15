@@ -34,7 +34,7 @@ const NSString* HOST_NAME = @"cbc.ca";
 }
 
 
-- (void)updateWithReachability:VCLReachability *reachability forType:(NSString *)type
+- (void)updateWithReachability:(VCLReachability *)reachability forType:(NSString*)type
 {
     if (reachability == [NSObject hostNameWithKey:@"cbc.ca"])
 	{
@@ -68,7 +68,7 @@ const NSString* HOST_NAME = @"cbc.ca";
 }
 
 
-- (void)configureTextField:(UITextField *)textField imageView:(UIImageView *)imageView reachability:VCLReachability *reachability
+- (void)configureTextField:(UITextField *)textField imageView:(UIImageView *)imageView reachability:(VCLReachability *)reachability
 {
     NetworkStatus netStatus = [reachability currentReachabilityStatus];
     BOOL connectionRequired = [reachability connectionRequired];

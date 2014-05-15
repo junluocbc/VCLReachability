@@ -14,17 +14,18 @@
 		97DB93CE19250E5300F94594 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DB93AA19250E5300F94594 /* Foundation.framework */; };
 		97DB93CF19250E5300F94594 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DB93AE19250E5300F94594 /* UIKit.framework */; };
 		97DB93E319250EA900F94594 /* VCLReachabilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB93E219250EA900F94594 /* VCLReachabilityTests.m */; };
-		97DB93E519250EB300F94594 /* VCLReachabilityTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97DB93E419250EB300F94594 /* VCLReachabilityTests-Info.plist */; };
 		97DB93E819250EB800F94594 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97DB93E619250EB800F94594 /* InfoPlist.strings */; };
 		97DB93F819250F1400F94594 /* VCLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB93F519250F1400F94594 /* VCLAppDelegate.m */; };
 		97DB93F919250F1400F94594 /* VCLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB93F719250F1400F94594 /* VCLViewController.m */; };
 		97DB93FB19250F4200F94594 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97DB93FA19250F4200F94594 /* MainStoryboard.storyboard */; };
 		97DB93FD19250F6700F94594 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97DB93FC19250F6700F94594 /* Images.xcassets */; };
-		97DB93FF19250F8000F94594 /* VCLReachability-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97DB93FE19250F8000F94594 /* VCLReachability-Info.plist */; };
 		97DB940219250F9500F94594 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97DB940019250F9500F94594 /* InfoPlist.strings */; };
 		97DB940519250FA400F94594 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB940319250FA400F94594 /* main.m */; };
 		97DB940B1925109000F94594 /* NSObject+VCLReachabilityObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB94071925109000F94594 /* NSObject+VCLReachabilityObject.m */; };
 		97DB940C1925109000F94594 /* VCLReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB94091925109000F94594 /* VCLReachability.m */; };
+		97DB940E19252E1A00F94594 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97DB940D19252E1A00F94594 /* Default-568h@2x.png */; };
+		97DB940F19252E4500F94594 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 97DB93F219250ECD00F94594 /* README.md */; };
+		D9308562E8D84BA6A1ADF762 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7205136DDCF5473C87A28082 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60B564C9AF6E47EF8846464C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Example/Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		7205136DDCF5473C87A28082 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DB93A719250E5300F94594 /* VCLReachability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCLReachability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DB93AA19250E5300F94594 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		97DB93AC19250E5300F94594 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,6 +72,7 @@
 		97DB94081925109000F94594 /* VCLReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLReachability.h; sourceTree = "<group>"; };
 		97DB94091925109000F94594 /* VCLReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCLReachability.m; sourceTree = "<group>"; };
 		97DB940A1925109000F94594 /* VCLSubscribeToReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLSubscribeToReachability.h; sourceTree = "<group>"; };
+		97DB940D19252E1A00F94594 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Assets/Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 				97DB93AD19250E5300F94594 /* CoreGraphics.framework in Frameworks */,
 				97DB93AF19250E5300F94594 /* UIKit.framework in Frameworks */,
 				97DB93AB19250E5300F94594 /* Foundation.framework in Frameworks */,
+				D9308562E8D84BA6A1ADF762 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +114,7 @@
 				97DB93D219250E5300F94594 /* Tests */,
 				97DB93A919250E5300F94594 /* Frameworks */,
 				97DB93A819250E5300F94594 /* Products */,
+				60B564C9AF6E47EF8846464C /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +134,7 @@
 				97DB93AC19250E5300F94594 /* CoreGraphics.framework */,
 				97DB93AE19250E5300F94594 /* UIKit.framework */,
 				97DB93CC19250E5300F94594 /* XCTest.framework */,
+				7205136DDCF5473C87A28082 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -135,6 +142,7 @@
 		97DB93B119250E5300F94594 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				97DB940D19252E1A00F94594 /* Default-568h@2x.png */,
 				97DB940319250FA400F94594 /* main.m */,
 				97DB940419250FA400F94594 /* VCLReachability-Prefix.pch */,
 				97DB940019250F9500F94594 /* InfoPlist.strings */,
@@ -213,9 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97DB93DC19250E5300F94594 /* Build configuration list for PBXNativeTarget "VCLReachability" */;
 			buildPhases = (
+				7AF2DA8722874A77BA13C668 /* Check Pods Manifest.lock */,
 				97DB93A319250E5300F94594 /* Sources */,
 				97DB93A419250E5300F94594 /* Frameworks */,
 				97DB93A519250E5300F94594 /* Resources */,
+				C3EB151687584C91B2CF23A5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,9 +294,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				97DB93FB19250F4200F94594 /* MainStoryboard.storyboard in Resources */,
-				97DB940219250F9500F94594 /* InfoPlist.strings in Resources */,
+				97DB940E19252E1A00F94594 /* Default-568h@2x.png in Resources */,
+				97DB940F19252E4500F94594 /* README.md in Resources */,
 				97DB93FD19250F6700F94594 /* Images.xcassets in Resources */,
-				97DB93FF19250F8000F94594 /* VCLReachability-Info.plist in Resources */,
+				97DB940219250F9500F94594 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,12 +305,44 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97DB93E519250EB300F94594 /* VCLReachabilityTests-Info.plist in Resources */,
 				97DB93E819250EB800F94594 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7AF2DA8722874A77BA13C668 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C3EB151687584C91B2CF23A5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Example/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		97DB93A319250E5300F94594 /* Sources */ = {
@@ -426,6 +469,7 @@
 		};
 		97DB93DD19250E5300F94594 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60B564C9AF6E47EF8846464C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -439,6 +483,7 @@
 		};
 		97DB93DE19250E5300F94594 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60B564C9AF6E47EF8846464C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -509,6 +554,7 @@
 				97DB93DE19250E5300F94594 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97DB93DF19250E5300F94594 /* Build configuration list for PBXNativeTarget "VCLReachabilityTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +563,7 @@
 				97DB93E119250E5300F94594 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "VCLReachability.h"
 
-@protocol VCLSubscribeToReachability
+@protocol VCLReachabilitySubscriber
 
 - (void)reachabilityChanged:(NSNotification *)note; // handler for change in reachability
 - (void)wifiReachabilityChanged:(NSNotification *)note;
@@ -21,15 +21,15 @@
 
 + (void)postNotificationTo:(NSString*)postNotificationName withReachability:(VCLReachability*)reachability;
 
-+ (void)subscribeToReachabilityNotificationsWithDelegate:(id<VCLSubscribeToReachability>) delegate;
-+ (void)subscribeToReachabilityForWifiWithDelegate:(id<VCLSubscribeToReachability>) delegate;
-+ (void)subscribeToReachabilityForHostNameWithName:(NSString *)hostName delegate:(id<VCLSubscribeToReachability>) delegate;
-+ (void)subscribeToReachabilityForInternetConnectionWithDelegate:(id<VCLSubscribeToReachability>) delegate;
++ (void)subscribeToReachabilityNotificationsWithDelegate:(id<VCLReachabilitySubscriber>) delegate;
++ (void)subscribeToReachabilityForWifiWithDelegate:(id<VCLReachabilitySubscriber>) delegate;
++ (void)subscribeToReachabilityForHostNameWithName:(NSString *)hostName delegate:(id<VCLReachabilitySubscriber>) delegate;
++ (void)subscribeToReachabilityForInternetConnectionWithDelegate:(id<VCLReachabilitySubscriber>) delegate;
 
-+ (void)unsubscribeToReachabilityNotificationsWithDelegate:(id<VCLSubscribeToReachability>) delegate;
-+ (void)unsubscribeToReachabilityForWifiWithDelegate:(id<VCLSubscribeToReachability>) delegate;
-+ (void)unsubscribeToReachabilityForHostNameWithName:(NSString *)hostName delegate:(id<VCLSubscribeToReachability>) delegate;
-+ (void)unsubscribeToReachabilityForInternetConnectionWithDelegate:(id<VCLSubscribeToReachability>) delegate;
++ (void)unsubscribeToReachabilityNotificationsWithDelegate:(id<VCLReachabilitySubscriber>) delegate;
++ (void)unsubscribeToReachabilityForWifiWithDelegate:(id<VCLReachabilitySubscriber>) delegate;
++ (void)unsubscribeToReachabilityForHostNameWithName:(NSString *)hostName delegate:(id<VCLReachabilitySubscriber>) delegate;
++ (void)unsubscribeToReachabilityForInternetConnectionWithDelegate:(id<VCLReachabilitySubscriber>) delegate;
 
 @optional
 - (void)updateInternetWithReachability:(VCLReachability *)reachability;
