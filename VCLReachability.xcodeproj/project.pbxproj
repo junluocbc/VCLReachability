@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		97DB93AB19250E5300F94594 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DB93AA19250E5300F94594 /* Foundation.framework */; };
+		97DB93AD19250E5300F94594 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DB93AC19250E5300F94594 /* CoreGraphics.framework */; };
+		97DB93AF19250E5300F94594 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DB93AE19250E5300F94594 /* UIKit.framework */; };
+		97DB93CD19250E5300F94594 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DB93CC19250E5300F94594 /* XCTest.framework */; };
+		97DB93CE19250E5300F94594 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DB93AA19250E5300F94594 /* Foundation.framework */; };
+		97DB93CF19250E5300F94594 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DB93AE19250E5300F94594 /* UIKit.framework */; };
+		97DB93E319250EA900F94594 /* VCLReachabilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB93E219250EA900F94594 /* VCLReachabilityTests.m */; };
+		97DB93E519250EB300F94594 /* VCLReachabilityTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97DB93E419250EB300F94594 /* VCLReachabilityTests-Info.plist */; };
+		97DB93E819250EB800F94594 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97DB93E619250EB800F94594 /* InfoPlist.strings */; };
+		97DB93F819250F1400F94594 /* VCLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB93F519250F1400F94594 /* VCLAppDelegate.m */; };
+		97DB93F919250F1400F94594 /* VCLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB93F719250F1400F94594 /* VCLViewController.m */; };
+		97DB93FB19250F4200F94594 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97DB93FA19250F4200F94594 /* MainStoryboard.storyboard */; };
+		97DB93FD19250F6700F94594 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97DB93FC19250F6700F94594 /* Images.xcassets */; };
+		97DB93FF19250F8000F94594 /* VCLReachability-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97DB93FE19250F8000F94594 /* VCLReachability-Info.plist */; };
+		97DB940219250F9500F94594 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97DB940019250F9500F94594 /* InfoPlist.strings */; };
+		97DB940519250FA400F94594 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB940319250FA400F94594 /* main.m */; };
+		97DB940B1925109000F94594 /* NSObject+VCLReachabilityObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB94071925109000F94594 /* NSObject+VCLReachabilityObject.m */; };
+		97DB940C1925109000F94594 /* VCLReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB94091925109000F94594 /* VCLReachability.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97DB93D019250E5300F94594 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97DB939F19250E5300F94594 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97DB93A619250E5300F94594;
+			remoteInfo = VCLReachability;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		97DB93A719250E5300F94594 /* VCLReachability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCLReachability.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97DB93AA19250E5300F94594 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		97DB93AC19250E5300F94594 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		97DB93AE19250E5300F94594 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		97DB93CB19250E5300F94594 /* VCLReachabilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VCLReachabilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97DB93CC19250E5300F94594 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		97DB93E219250EA900F94594 /* VCLReachabilityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCLReachabilityTests.m; path = Tests/VCLReachabilityTests.m; sourceTree = SOURCE_ROOT; };
+		97DB93E419250EB300F94594 /* VCLReachabilityTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "VCLReachabilityTests-Info.plist"; path = "Tests/VCLReachabilityTests-Info.plist"; sourceTree = SOURCE_ROOT; };
+		97DB93E719250EB800F94594 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Tests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		97DB93EA19250ECD00F94594 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
+		97DB93ED19250ECD00F94594 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		97DB93EF19250ECD00F94594 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		97DB93F019250ECD00F94594 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		97DB93F119250ECD00F94594 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		97DB93F219250ECD00F94594 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		97DB93F319250ECD00F94594 /* VCLReachability.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = VCLReachability.podspec; sourceTree = "<group>"; };
+		97DB93F419250F1400F94594 /* VCLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLAppDelegate.h; sourceTree = "<group>"; };
+		97DB93F519250F1400F94594 /* VCLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCLAppDelegate.m; sourceTree = "<group>"; };
+		97DB93F619250F1400F94594 /* VCLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLViewController.h; sourceTree = "<group>"; };
+		97DB93F719250F1400F94594 /* VCLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCLViewController.m; sourceTree = "<group>"; };
+		97DB93FA19250F4200F94594 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		97DB93FC19250F6700F94594 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		97DB93FE19250F8000F94594 /* VCLReachability-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "VCLReachability-Info.plist"; path = "Example/VCLReachability-Info.plist"; sourceTree = SOURCE_ROOT; };
+		97DB940119250F9500F94594 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Example/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		97DB940319250FA400F94594 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Example/main.m; sourceTree = SOURCE_ROOT; };
+		97DB940419250FA400F94594 /* VCLReachability-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "VCLReachability-Prefix.pch"; path = "Example/VCLReachability-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		97DB94061925109000F94594 /* NSObject+VCLReachabilityObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VCLReachabilityObject.h"; sourceTree = "<group>"; };
+		97DB94071925109000F94594 /* NSObject+VCLReachabilityObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VCLReachabilityObject.m"; sourceTree = "<group>"; };
+		97DB94081925109000F94594 /* VCLReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLReachability.h; sourceTree = "<group>"; };
+		97DB94091925109000F94594 /* VCLReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCLReachability.m; sourceTree = "<group>"; };
+		97DB940A1925109000F94594 /* VCLSubscribeToReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLSubscribeToReachability.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97DB93A419250E5300F94594 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97DB93AD19250E5300F94594 /* CoreGraphics.framework in Frameworks */,
+				97DB93AF19250E5300F94594 /* UIKit.framework in Frameworks */,
+				97DB93AB19250E5300F94594 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97DB93C819250E5300F94594 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97DB93CD19250E5300F94594 /* XCTest.framework in Frameworks */,
+				97DB93CF19250E5300F94594 /* UIKit.framework in Frameworks */,
+				97DB93CE19250E5300F94594 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		97DB939E19250E5300F94594 = {
+			isa = PBXGroup;
+			children = (
+				97DB93EA19250ECD00F94594 /* CHANGELOG.md */,
+				97DB93E919250ECD00F94594 /* Assets */,
+				97DB93EB19250ECD00F94594 /* Classes */,
+				97DB93EE19250ECD00F94594 /* Example */,
+				97DB93F019250ECD00F94594 /* LICENSE */,
+				97DB93F119250ECD00F94594 /* Rakefile */,
+				97DB93F219250ECD00F94594 /* README.md */,
+				97DB93F319250ECD00F94594 /* VCLReachability.podspec */,
+				97DB93D219250E5300F94594 /* Tests */,
+				97DB93A919250E5300F94594 /* Frameworks */,
+				97DB93A819250E5300F94594 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		97DB93A819250E5300F94594 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97DB93A719250E5300F94594 /* VCLReachability.app */,
+				97DB93CB19250E5300F94594 /* VCLReachabilityTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97DB93A919250E5300F94594 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97DB93AA19250E5300F94594 /* Foundation.framework */,
+				97DB93AC19250E5300F94594 /* CoreGraphics.framework */,
+				97DB93AE19250E5300F94594 /* UIKit.framework */,
+				97DB93CC19250E5300F94594 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97DB93B119250E5300F94594 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				97DB940319250FA400F94594 /* main.m */,
+				97DB940419250FA400F94594 /* VCLReachability-Prefix.pch */,
+				97DB940019250F9500F94594 /* InfoPlist.strings */,
+				97DB93FE19250F8000F94594 /* VCLReachability-Info.plist */,
+			);
+			name = "Supporting Files";
+			path = ../VCLReachability;
+			sourceTree = "<group>";
+		};
+		97DB93D219250E5300F94594 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				97DB93E219250EA900F94594 /* VCLReachabilityTests.m */,
+				97DB93D319250E5300F94594 /* Supporting Files */,
+			);
+			name = Tests;
+			path = VCLReachabilityTests;
+			sourceTree = "<group>";
+		};
+		97DB93D319250E5300F94594 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				97DB93E619250EB800F94594 /* InfoPlist.strings */,
+				97DB93E419250EB300F94594 /* VCLReachabilityTests-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97DB93E919250ECD00F94594 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		97DB93EB19250ECD00F94594 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				97DB93EC19250ECD00F94594 /* ios */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		97DB93EC19250ECD00F94594 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				97DB94061925109000F94594 /* NSObject+VCLReachabilityObject.h */,
+				97DB94071925109000F94594 /* NSObject+VCLReachabilityObject.m */,
+				97DB94081925109000F94594 /* VCLReachability.h */,
+				97DB94091925109000F94594 /* VCLReachability.m */,
+				97DB940A1925109000F94594 /* VCLSubscribeToReachability.h */,
+				97DB93ED19250ECD00F94594 /* .gitkeep */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		97DB93EE19250ECD00F94594 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				97DB93FC19250F6700F94594 /* Images.xcassets */,
+				97DB93FA19250F4200F94594 /* MainStoryboard.storyboard */,
+				97DB93F419250F1400F94594 /* VCLAppDelegate.h */,
+				97DB93F519250F1400F94594 /* VCLAppDelegate.m */,
+				97DB93F619250F1400F94594 /* VCLViewController.h */,
+				97DB93F719250F1400F94594 /* VCLViewController.m */,
+				97DB93EF19250ECD00F94594 /* Podfile */,
+				97DB93B119250E5300F94594 /* Supporting Files */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97DB93A619250E5300F94594 /* VCLReachability */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97DB93DC19250E5300F94594 /* Build configuration list for PBXNativeTarget "VCLReachability" */;
+			buildPhases = (
+				97DB93A319250E5300F94594 /* Sources */,
+				97DB93A419250E5300F94594 /* Frameworks */,
+				97DB93A519250E5300F94594 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VCLReachability;
+			productName = VCLReachability;
+			productReference = 97DB93A719250E5300F94594 /* VCLReachability.app */;
+			productType = "com.apple.product-type.application";
+		};
+		97DB93CA19250E5300F94594 /* VCLReachabilityTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97DB93DF19250E5300F94594 /* Build configuration list for PBXNativeTarget "VCLReachabilityTests" */;
+			buildPhases = (
+				97DB93C719250E5300F94594 /* Sources */,
+				97DB93C819250E5300F94594 /* Frameworks */,
+				97DB93C919250E5300F94594 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97DB93D119250E5300F94594 /* PBXTargetDependency */,
+			);
+			name = VCLReachabilityTests;
+			productName = VCLReachabilityTests;
+			productReference = 97DB93CB19250E5300F94594 /* VCLReachabilityTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97DB939F19250E5300F94594 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VCL;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = com.verticodelabs;
+				TargetAttributes = {
+					97DB93CA19250E5300F94594 = {
+						TestTargetID = 97DB93A619250E5300F94594;
+					};
+				};
+			};
+			buildConfigurationList = 97DB93A219250E5300F94594 /* Build configuration list for PBXProject "VCLReachability" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 97DB939E19250E5300F94594;
+			productRefGroup = 97DB93A819250E5300F94594 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97DB93A619250E5300F94594 /* VCLReachability */,
+				97DB93CA19250E5300F94594 /* VCLReachabilityTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97DB93A519250E5300F94594 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97DB93FB19250F4200F94594 /* MainStoryboard.storyboard in Resources */,
+				97DB940219250F9500F94594 /* InfoPlist.strings in Resources */,
+				97DB93FD19250F6700F94594 /* Images.xcassets in Resources */,
+				97DB93FF19250F8000F94594 /* VCLReachability-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97DB93C919250E5300F94594 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97DB93E519250EB300F94594 /* VCLReachabilityTests-Info.plist in Resources */,
+				97DB93E819250EB800F94594 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		97DB93A319250E5300F94594 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97DB93F819250F1400F94594 /* VCLAppDelegate.m in Sources */,
+				97DB940519250FA400F94594 /* main.m in Sources */,
+				97DB940C1925109000F94594 /* VCLReachability.m in Sources */,
+				97DB93F919250F1400F94594 /* VCLViewController.m in Sources */,
+				97DB940B1925109000F94594 /* NSObject+VCLReachabilityObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97DB93C719250E5300F94594 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97DB93E319250EA900F94594 /* VCLReachabilityTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97DB93D119250E5300F94594 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97DB93A619250E5300F94594 /* VCLReachability */;
+			targetProxy = 97DB93D019250E5300F94594 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		97DB93E619250EB800F94594 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97DB93E719250EB800F94594 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		97DB940019250F9500F94594 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97DB940119250F9500F94594 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		97DB93DA19250E5300F94594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		97DB93DB19250E5300F94594 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		97DB93DD19250E5300F94594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Example/VCLReachability-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/VCLReachability-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		97DB93DE19250E5300F94594 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Example/VCLReachability-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Example/VCLReachability-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		97DB93E019250E5300F94594 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VCLReachability.app/VCLReachability";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Example/VCLReachability-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VCLReachabilityTests/VCLReachabilityTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		97DB93E119250E5300F94594 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VCLReachability.app/VCLReachability";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Example/VCLReachability-Prefix.pch";
+				INFOPLIST_FILE = "VCLReachabilityTests/VCLReachabilityTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		97DB93A219250E5300F94594 /* Build configuration list for PBXProject "VCLReachability" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97DB93DA19250E5300F94594 /* Debug */,
+				97DB93DB19250E5300F94594 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97DB93DC19250E5300F94594 /* Build configuration list for PBXNativeTarget "VCLReachability" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97DB93DD19250E5300F94594 /* Debug */,
+				97DB93DE19250E5300F94594 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		97DB93DF19250E5300F94594 /* Build configuration list for PBXNativeTarget "VCLReachabilityTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97DB93E019250E5300F94594 /* Debug */,
+				97DB93E119250E5300F94594 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 97DB939F19250E5300F94594 /* Project object */;
+}
