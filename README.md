@@ -1,26 +1,50 @@
-# VCLReachability
+## VCLReachability
 
-[![Version](http://cocoapod-badges.herokuapp.com/v/VCLReachability/badge.png)](http://cocoadocs.org/docsets/VCLReachability)
-[![Platform](http://cocoapod-badges.herokuapp.com/p/VCLReachability/badge.png)](http://cocoadocs.org/docsets/VCLReachability)
+Purpose
+--------------
 
-## Usage
+VCLReachability is a reachability library for iOS. It is designed to help you interface with network activity events by allowing all object to pub and subscribe with reachability events. Based on Apples Reachability project.
 
-To run the example project; clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+Supported iOS SDK Versions
+-----------------------------
 
-## Installation
+* Supported build target - iOS 7.0
 
-VCLReachability is available through [CocoaPods](http://cocoapods.org), to install
-it simply add the following line to your Podfile:
 
-    pod "VCLReachability"
+ARC Compatibility
+------------------
 
-## Author
+VCLReachability works both with ARC.
 
-adrianmaurer, adriano.maurer@cbc.ca
 
-## License
+Usage
+-----------------
 
-VCLReachability is available under the MIT license. See the LICENSE file for more info.
+For application demo see ViewController and AppDelegate.
 
+Build and run the sample using Xcode. When running the iPhone Simulator, you can exercise the application by disconnecting the Ethernet cable, turning off AirPort, or by joining an ad-hoc local Wi-Fi network.
+
+See the example project and test for examples on how to use.
+
+IMPORTANT: VCLReachability must use DNS to resolve the host name before it can determine the VCLReachability of that host, and this may take time on certain network connections.  Because of this, the API will return NotReachable until name resolution has completed.  This delay may be visible in the interface on some networks.
+
+The VCLReachability sample demonstrates the asynchronous use of the SCNetworkReachability API. You can use the API synchronously, but do not issue a synchronous check by hostName on the main thread. If the device cannot reach a DNS server or is on a slow network, a synchronous call to the SCNetworkReachabilityGetFlags function can block for up to 30 seconds trying to resolve the hostName. If this happens on the main thread, the application watchdog will kill the application after 20 seconds of inactivity.
+
+SCNetworkReachability API's do not currently provide a means to detect support for GameKit peer-to-peer networking over Bluetooth.
+
+
+Methods
+----------------
+
+See VCLSubscribeToReachability protocol.
+
+For quick use import `NSObject+VCLReachabilitySubscriber.h`
+
+
+Release Notes
+------------------
+
+Version 1.0.0
+
+- Initial release

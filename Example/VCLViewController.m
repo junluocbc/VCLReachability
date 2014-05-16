@@ -14,7 +14,7 @@
 
 @implementation VCLViewController
 
-const NSString* HOST_NAME = @"cbc.ca";
+const NSString* HOST_NAME = @"google.com";
 
 - (void)viewDidLoad
 {
@@ -28,7 +28,7 @@ const NSString* HOST_NAME = @"cbc.ca";
     NSString *remoteHostLabelFormatString = NSLocalizedString(@"Remote Host: %@", @"Remote host label format string");
     self.remoteHostLabel.text = [NSString stringWithFormat:remoteHostLabelFormatString, HOST_NAME];
     
-    [VCLReachability subscribeToReachabilityForHostNameWithName:@"cbc.ca" delegate:self];
+    [VCLReachability subscribeToReachabilityForHostNameWithName:@"google.com" delegate:self];
     [VCLReachability subscribeToReachabilityForInternetConnectionWithDelegate:self];
     [VCLReachability subscribeToReachabilityForWifiWithDelegate:self];
 }
@@ -36,7 +36,7 @@ const NSString* HOST_NAME = @"cbc.ca";
 
 - (void)updateWithReachability:(VCLReachability *)reachability forType:(NSString*)type
 {
-    if (reachability == [VCLReachability hostNameWithKey:@"cbc.ca"])
+    if (reachability == [VCLReachability hostNameWithKey:@"google.com"])
 	{
 		[self configureTextField:self.remoteHostStatusField imageView:self.remoteHostImageView reachability:reachability];
         NetworkStatus netStatus = [reachability currentReachabilityStatus];
