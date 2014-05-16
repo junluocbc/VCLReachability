@@ -118,7 +118,6 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 }
 
 #pragma mark - VLReachability Objects
-static SCNetworkReachabilityRef _alwaysReachability;
 static VCLReachability* _internetReachability;
 static VCLReachability* _wifiReachability;
 static NSMutableDictionary* _hostNames;

@@ -6,27 +6,27 @@
 #
 Pod::Spec.new do |s|
   s.name             = "VCLReachability"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of VCLReachability."
-  s.description      = <<-DESC
+  s.version          = "1.0.0"
+  s.summary          = "VCLReachability is a reachability library for iOS. It is designed to help you interface with network activity events by allowing all object to pub and subscribe with reachability events. Based on Apples Reachability project."
+  #s.description      = <<-DESC
                        An optional longer description of VCLReachability
 
                        * Markdown format.
                        * Don't worry about the indent, we strip it!
                        DESC
-  s.homepage         = "http://EXAMPLE/NAME"
-  s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/VerticodeLabs/VCLReachability"
+  #s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "adrianmaurer" => "adriano.maurer@cbc.ca" }
-  s.source           = { :git => "http://EXAMPLE/NAME.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/EXAMPLE'
+  s.author           = { "adrianmaurer" => "adrian@verticodelabs.com" }
+  s.source           = { :git => "https://github.com/VerticodeLabs/VCLReachability.git", :tag => 1.0.0 }
+  s.social_media_url = 'https://twitter.com/verticodelabs'
 
-  # s.platform     = :ios, '5.0'
+   s.platform     = :ios, '7.0'
   # s.ios.deployment_target = '5.0'
   # s.osx.deployment_target = '10.7'
   s.requires_arc = true
 
-  s.source_files = 'Classes'
+  s.source_files = 'Classes', 'Example', 'Tests'
   s.resources = 'Assets/*.png'
 
   s.ios.exclude_files = 'Classes/osx'
