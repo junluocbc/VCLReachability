@@ -7,7 +7,7 @@
 Pod::Spec.new do |s|
   s.name             = "VCLReachability"
   s.version          = "1.0.0"
-  s.summary          = "VCLReachability is a reachability library for iOS. It is designed to help you interface with network activity events by allowing all object to pub and subscribe with reachability events. Based on Apples Reachability project."
+  s.summary          = "VCLReachability is a network reachability library for iOS. It is designed to help you interface with network activity."
   s.description      = <<-DESC
                        ## VCLReachability
 
@@ -72,8 +72,8 @@ Pod::Spec.new do |s|
   # s.osx.deployment_target = '10.7'
   s.requires_arc = true
 
-  s.source_files = 'Classes' #'Example', 'Tests'
-  s.resources = 'Assets'
+  s.source_files = 'Classes/**/*.{h,m}' #'Example', 'Tests'
+  #s.resources = 'Assets'
 
   s.ios.exclude_files = 'Classes/osx'
   s.osx.exclude_files = 'Classes/ios'
