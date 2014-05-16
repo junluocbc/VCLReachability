@@ -6,9 +6,9 @@
 //
 
 
-#import "NSObject+VCLReachabilityObject.h"
+#import "NSObject+VCLReachabilitySubscriber.h"
 
-@implementation NSObject (VCLReachabilityObject)
+@implementation NSObject (VCLReachabilitySubscriber)
 
 #pragma mark - VLReachability Change
 
@@ -20,10 +20,7 @@
 	VCLReachability* curReach = [note object];
 	NSParameterAssert([curReach isKindOfClass:[VCLReachability class]]);
     
-    // If this is a generic callback
-//    if (curReach != _wifiReachability && curReach != _internetReachability && ![_hostNames objectExistsInKeys:[_hostNames allKeys] forObject:curReach]) {
-        [(id<VCLReachabilitySubscriber>)self updateWithReachability:curReach forType:nil];
-//    }
+    [(id<VCLReachabilitySubscriber>)self updateWithReachability:curReach forType:nil];
 }
 
 /*!

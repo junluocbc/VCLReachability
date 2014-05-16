@@ -12,16 +12,16 @@
 @protocol VCLReachabilitySubscriber
 
 /*
- * Recieve change it network events
+ * Recieve change in network events
  */
-+ (void)reachabilityChanged:(NSNotification *)note;
-+ (void)wifiReachabilityChanged:(NSNotification *)note;
-+ (void)internetReachabilityChanged:(NSNotification *)note;
-+ (void)hostNameReachabilityChanged:(NSNotification *)note;
+- (void)reachabilityChanged:(NSNotification *)note;
+- (void)wifiReachabilityChanged:(NSNotification *)note;
+- (void)internetReachabilityChanged:(NSNotification *)note;
+- (void)hostNameReachabilityChanged:(NSNotification *)note;
 
 @optional
 /*
- * Resolve change it network events
+ * Resolve changes in specific network events
  */
 - (void)updateInternetWithReachability:(VCLReachability *)reachability;
 - (void)updateHostNameWithReachability:(VCLReachability *)reachability;

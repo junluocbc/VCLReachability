@@ -24,7 +24,7 @@
 		97DB940C1925109000F94594 /* VCLReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB94091925109000F94594 /* VCLReachability.m */; };
 		97DB940E19252E1A00F94594 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97DB940D19252E1A00F94594 /* Default-568h@2x.png */; };
 		97DB940F19252E4500F94594 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 97DB93F219250ECD00F94594 /* README.md */; };
-		97DB941219254B6F00F94594 /* NSObject+VCLReachabilityObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB941119254B6F00F94594 /* NSObject+VCLReachabilityObject.m */; };
+		97DB941219254B6F00F94594 /* NSObject+VCLReachabilitySubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB941119254B6F00F94594 /* NSObject+VCLReachabilitySubscriber.m */; };
 		D9308562E8D84BA6A1ADF762 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7205136DDCF5473C87A28082 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -71,8 +71,8 @@
 		97DB94091925109000F94594 /* VCLReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCLReachability.m; sourceTree = "<group>"; };
 		97DB940A1925109000F94594 /* VCLReachabilitySubscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLReachabilitySubscriber.h; sourceTree = "<group>"; };
 		97DB940D19252E1A00F94594 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Assets/Default-568h@2x.png"; sourceTree = "<group>"; };
-		97DB941019254B6F00F94594 /* NSObject+VCLReachabilityObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VCLReachabilityObject.h"; sourceTree = "<group>"; };
-		97DB941119254B6F00F94594 /* NSObject+VCLReachabilityObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VCLReachabilityObject.m"; sourceTree = "<group>"; };
+		97DB941019254B6F00F94594 /* NSObject+VCLReachabilitySubscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VCLReachabilitySubscriber.h"; sourceTree = "<group>"; };
+		97DB941119254B6F00F94594 /* NSObject+VCLReachabilitySubscriber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VCLReachabilitySubscriber.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,8 +189,8 @@
 		97DB93EC19250ECD00F94594 /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				97DB941019254B6F00F94594 /* NSObject+VCLReachabilityObject.h */,
-				97DB941119254B6F00F94594 /* NSObject+VCLReachabilityObject.m */,
+				97DB941019254B6F00F94594 /* NSObject+VCLReachabilitySubscriber.h */,
+				97DB941119254B6F00F94594 /* NSObject+VCLReachabilitySubscriber.m */,
 				97DB94081925109000F94594 /* VCLReachability.h */,
 				97DB94091925109000F94594 /* VCLReachability.m */,
 				97DB940A1925109000F94594 /* VCLReachabilitySubscriber.h */,
@@ -350,7 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97DB93F819250F1400F94594 /* VCLAppDelegate.m in Sources */,
-				97DB941219254B6F00F94594 /* NSObject+VCLReachabilityObject.m in Sources */,
+				97DB941219254B6F00F94594 /* NSObject+VCLReachabilitySubscriber.m in Sources */,
 				97DB940C1925109000F94594 /* VCLReachability.m in Sources */,
 				97DB93F919250F1400F94594 /* VCLViewController.m in Sources */,
 				97DB940519250FA400F94594 /* main.m in Sources */,

@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VCLReachabilitySubscriber.h"
-#import "VCLReachability.h"
+#import "NSObject+VCLReachabilitySubscriber.h"
 
 
 @interface VCLViewController : UIViewController <VCLReachabilitySubscriber>
