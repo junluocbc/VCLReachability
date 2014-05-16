@@ -108,6 +108,7 @@ extern NSString* const TYPE_HOSTNAME;
  * Get the current reachability status
  */
 - (NetworkStatus)currentReachabilityStatus;
++ (NetworkStatus)currentReachabilityStatus;
 
 /*!
  * WWAN may be available, but not active until a connection has been established. WiFi may require a connection for VPN on Demand.
