@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = "VCLReachability"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "VCLReachability is a network reachability library for iOS. It is designed to help you interface with network activity."
   s.description      = <<-DESC
                        ## VCLReachability
@@ -64,7 +64,7 @@ Pod::Spec.new do |s|
   #s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "adrianmaurer" => "adrian@verticodelabs.com" }
-  s.source           = { :git => "https://github.com/VerticodeLabs/VCLReachability.git", :tag => "1.0.0" }
+  s.source           = { :git => "https://github.com/VerticodeLabs/VCLReachability.git", :tag => "1.0.1" }
   s.social_media_url = 'https://twitter.com/verticodelabs'
 
   s.platform     = :ios, '7.0'
