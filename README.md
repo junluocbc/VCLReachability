@@ -37,7 +37,7 @@ SCNetworkReachability API's do not currently provide a means to detect support f
 Methods
 ----------------
 
-See VCLSubscribeToReachability protocol.
+See VCLReachabilitySubscriber protocol.
 
 For quick use import `NSObject+VCLReachabilitySubscriber.h`
 
