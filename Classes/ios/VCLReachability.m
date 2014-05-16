@@ -118,6 +118,7 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 }
 
 #pragma mark - VLReachability Objects
+static VCLReachability* _alwaysReachability;
 static VCLReachability* _internetReachability;
 static VCLReachability* _wifiReachability;
 static NSMutableDictionary* _hostNames;
@@ -342,22 +343,21 @@ static NSMutableDictionary* _hostNames;
 /* Static version for checks without subscribing */
 + (NetworkStatus)currentReachabilityStatus
 {
-    VCLReachability* myReachabilityReference;
-    myReachabilityReference = [VCLReachability createOrReturnReachabilityWithReachability:myReachabilityReference forReachabilityConnection:[VCLReachability reachabilityForInternetConnection]];
+    _alwaysReachability = [VCLReachability createOrReturnReachabilityWithReachability:_alwaysReachability forReachabilityConnection:[VCLReachability reachabilityForInternetConnection]];
     
-	NSAssert(myReachabilityReference->_reachabilityRef != NULL, @"currentNetworkStatus called with NULL SCNetworkReachabilityRef");
+	NSAssert(_alwaysReachability->_reachabilityRef != NULL, @"currentNetworkStatus called with NULL SCNetworkReachabilityRef");
 	NetworkStatus returnValue = NotReachable;
 	SCNetworkReachabilityFlags flags;
     
-	if (SCNetworkReachabilityGetFlags(myReachabilityReference->_reachabilityRef, &flags))
+	if (SCNetworkReachabilityGetFlags(_alwaysReachability->_reachabilityRef, &flags))
 	{
-		if (myReachabilityReference->_alwaysReturnLocalWiFiStatus)
+		if (_alwaysReachability->_alwaysReturnLocalWiFiStatus)
 		{
-			returnValue = [myReachabilityReference localWiFiStatusForFlags:flags];
+			returnValue = [_alwaysReachability localWiFiStatusForFlags:flags];
 		}
 		else
 		{
-			returnValue = [myReachabilityReference networkStatusForFlags:flags];
+			returnValue = [_alwaysReachability networkStatusForFlags:flags];
 		}
 	}
     
