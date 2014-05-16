@@ -22,9 +22,10 @@
 		97DB940219250F9500F94594 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97DB940019250F9500F94594 /* InfoPlist.strings */; };
 		97DB940519250FA400F94594 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB940319250FA400F94594 /* main.m */; };
 		97DB940C1925109000F94594 /* VCLReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB94091925109000F94594 /* VCLReachability.m */; };
-		97DB940E19252E1A00F94594 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97DB940D19252E1A00F94594 /* Default-568h@2x.png */; };
 		97DB940F19252E4500F94594 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 97DB93F219250ECD00F94594 /* README.md */; };
 		97DB941219254B6F00F94594 /* NSObject+VCLReachabilitySubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB941119254B6F00F94594 /* NSObject+VCLReachabilitySubscriber.m */; };
+		97DB944F192666F800F94594 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97DB944E192666F800F94594 /* Default-568h@2x.png */; };
+		97DB9450192666F800F94594 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97DB944E192666F800F94594 /* Default-568h@2x.png */; };
 		D9308562E8D84BA6A1ADF762 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7205136DDCF5473C87A28082 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -70,9 +71,9 @@
 		97DB94081925109000F94594 /* VCLReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLReachability.h; sourceTree = "<group>"; };
 		97DB94091925109000F94594 /* VCLReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCLReachability.m; sourceTree = "<group>"; };
 		97DB940A1925109000F94594 /* VCLReachabilitySubscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCLReachabilitySubscriber.h; sourceTree = "<group>"; };
-		97DB940D19252E1A00F94594 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Assets/Default-568h@2x.png"; sourceTree = "<group>"; };
 		97DB941019254B6F00F94594 /* NSObject+VCLReachabilitySubscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VCLReachabilitySubscriber.h"; sourceTree = "<group>"; };
 		97DB941119254B6F00F94594 /* NSObject+VCLReachabilitySubscriber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VCLReachabilitySubscriber.m"; sourceTree = "<group>"; };
+		97DB944E192666F800F94594 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Example/Images.xcassets/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +104,6 @@
 		97DB939E19250E5300F94594 = {
 			isa = PBXGroup;
 			children = (
-				97DB93EA19250ECD00F94594 /* CHANGELOG.md */,
 				97DB93E919250ECD00F94594 /* Assets */,
 				97DB93EB19250ECD00F94594 /* Classes */,
 				97DB93EE19250ECD00F94594 /* Example */,
@@ -111,6 +111,7 @@
 				97DB93F119250ECD00F94594 /* Rakefile */,
 				97DB93F219250ECD00F94594 /* README.md */,
 				97DB93F319250ECD00F94594 /* VCLReachability.podspec */,
+				97DB93EA19250ECD00F94594 /* CHANGELOG.md */,
 				97DB93D219250E5300F94594 /* Tests */,
 				97DB93A919250E5300F94594 /* Frameworks */,
 				97DB93A819250E5300F94594 /* Products */,
@@ -142,7 +143,7 @@
 		97DB93B119250E5300F94594 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				97DB940D19252E1A00F94594 /* Default-568h@2x.png */,
+				97DB944E192666F800F94594 /* Default-568h@2x.png */,
 				97DB940319250FA400F94594 /* main.m */,
 				97DB940419250FA400F94594 /* VCLReachability-Prefix.pch */,
 				97DB940019250F9500F94594 /* InfoPlist.strings */,
@@ -294,9 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				97DB93FB19250F4200F94594 /* MainStoryboard.storyboard in Resources */,
-				97DB940E19252E1A00F94594 /* Default-568h@2x.png in Resources */,
 				97DB940F19252E4500F94594 /* README.md in Resources */,
 				97DB93FD19250F6700F94594 /* Images.xcassets in Resources */,
+				97DB944F192666F800F94594 /* Default-568h@2x.png in Resources */,
 				97DB940219250F9500F94594 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97DB93E819250EB800F94594 /* InfoPlist.strings in Resources */,
+				97DB9450192666F800F94594 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
