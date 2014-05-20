@@ -42,6 +42,7 @@
 /* Begin PBXFileReference section */
 		71BF9B15A1DF473C8E5A7A59 /* libPods-VCLReachability.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VCLReachability.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7205136DDCF5473C87A28082 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		97A3CD2D192BDC6B00718BF1 /* Pods-VCLReachability.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Pods-VCLReachability.xcconfig"; path = "Pods/Pods-VCLReachability.xcconfig"; sourceTree = "<group>"; };
 		97DB93A719250E5300F94594 /* VCLReachability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCLReachability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DB93AA19250E5300F94594 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		97DB93AC19250E5300F94594 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -73,8 +74,7 @@
 		97DB941019254B6F00F94594 /* NSObject+VCLReachabilitySubscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VCLReachabilitySubscriber.h"; sourceTree = "<group>"; };
 		97DB941119254B6F00F94594 /* NSObject+VCLReachabilitySubscriber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VCLReachabilitySubscriber.m"; sourceTree = "<group>"; };
 		97DB944E192666F800F94594 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Example/Images.xcassets/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
-		97DB9495192BB8C400F94594 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		EBD4ACF192DB43ABA18CDEEB /* Pods-VCLReachability.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCLReachability.xcconfig"; path = "../Pods/Pods-VCLReachability.xcconfig"; sourceTree = "<group>"; };
+		97DB9495192BB8C400F94594 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,7 @@
 				97DB93D219250E5300F94594 /* Tests */,
 				97DB93A919250E5300F94594 /* Frameworks */,
 				97DB93A819250E5300F94594 /* Products */,
-				EBD4ACF192DB43ABA18CDEEB /* Pods-VCLReachability.xcconfig */,
+				97A3CD2D192BDC6B00718BF1 /* Pods-VCLReachability.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -343,7 +343,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Pods-VCLReachability-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-VCLReachability-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -473,7 +473,7 @@
 		};
 		97DB93DD19250E5300F94594 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBD4ACF192DB43ABA18CDEEB /* Pods-VCLReachability.xcconfig */;
+			baseConfigurationReference = 97A3CD2D192BDC6B00718BF1 /* Pods-VCLReachability.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -487,7 +487,7 @@
 		};
 		97DB93DE19250E5300F94594 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBD4ACF192DB43ABA18CDEEB /* Pods-VCLReachability.xcconfig */;
+			baseConfigurationReference = 97A3CD2D192BDC6B00718BF1 /* Pods-VCLReachability.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
