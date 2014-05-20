@@ -1,5 +1,0 @@
-pod "VCLReachability", :path => "../"
-platform :ios, '7.0'
-xcodeproj '../VCLReachability.xcodeproj'
-
-pod 'CRToast', '~> 0.0.6'
