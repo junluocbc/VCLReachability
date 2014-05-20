@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		587AB8E708A14962BFAE2E21 /* libPods-VCLReachability.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BF9B15A1DF473C8E5A7A59 /* libPods-VCLReachability.a */; };
 		97DB93AB19250E5300F94594 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DB93AA19250E5300F94594 /* Foundation.framework */; };
 		97DB93AD19250E5300F94594 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DB93AC19250E5300F94594 /* CoreGraphics.framework */; };
 		97DB93AF19250E5300F94594 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DB93AE19250E5300F94594 /* UIKit.framework */; };
@@ -26,7 +27,6 @@
 		97DB941219254B6F00F94594 /* NSObject+VCLReachabilitySubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DB941119254B6F00F94594 /* NSObject+VCLReachabilitySubscriber.m */; };
 		97DB944F192666F800F94594 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97DB944E192666F800F94594 /* Default-568h@2x.png */; };
 		97DB9450192666F800F94594 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97DB944E192666F800F94594 /* Default-568h@2x.png */; };
-		D9308562E8D84BA6A1ADF762 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7205136DDCF5473C87A28082 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		60B564C9AF6E47EF8846464C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Example/Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		71BF9B15A1DF473C8E5A7A59 /* libPods-VCLReachability.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VCLReachability.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7205136DDCF5473C87A28082 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DB93A719250E5300F94594 /* VCLReachability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCLReachability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DB93AA19250E5300F94594 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -74,6 +74,7 @@
 		97DB941119254B6F00F94594 /* NSObject+VCLReachabilitySubscriber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VCLReachabilitySubscriber.m"; sourceTree = "<group>"; };
 		97DB944E192666F800F94594 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Example/Images.xcassets/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		97DB9495192BB8C400F94594 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		EBD4ACF192DB43ABA18CDEEB /* Pods-VCLReachability.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCLReachability.xcconfig"; path = "../Pods/Pods-VCLReachability.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +85,7 @@
 				97DB93AD19250E5300F94594 /* CoreGraphics.framework in Frameworks */,
 				97DB93AF19250E5300F94594 /* UIKit.framework in Frameworks */,
 				97DB93AB19250E5300F94594 /* Foundation.framework in Frameworks */,
-				D9308562E8D84BA6A1ADF762 /* libPods.a in Frameworks */,
+				587AB8E708A14962BFAE2E21 /* libPods-VCLReachability.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +117,7 @@
 				97DB93D219250E5300F94594 /* Tests */,
 				97DB93A919250E5300F94594 /* Frameworks */,
 				97DB93A819250E5300F94594 /* Products */,
-				60B564C9AF6E47EF8846464C /* Pods.xcconfig */,
+				EBD4ACF192DB43ABA18CDEEB /* Pods-VCLReachability.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +138,7 @@
 				97DB93AE19250E5300F94594 /* UIKit.framework */,
 				97DB93CC19250E5300F94594 /* XCTest.framework */,
 				7205136DDCF5473C87A28082 /* libPods.a */,
+				71BF9B15A1DF473C8E5A7A59 /* libPods-VCLReachability.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -341,7 +343,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Example/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Pods-VCLReachability-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -471,7 +473,7 @@
 		};
 		97DB93DD19250E5300F94594 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60B564C9AF6E47EF8846464C /* Pods.xcconfig */;
+			baseConfigurationReference = EBD4ACF192DB43ABA18CDEEB /* Pods-VCLReachability.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -485,7 +487,7 @@
 		};
 		97DB93DE19250E5300F94594 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60B564C9AF6E47EF8846464C /* Pods.xcconfig */;
+			baseConfigurationReference = EBD4ACF192DB43ABA18CDEEB /* Pods-VCLReachability.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
