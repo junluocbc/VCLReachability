@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "VCLReachability"
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.summary          = "VCLReachability is a network reachability library for iOS. It is designed to help you interface with network activity."
   s.description      = <<-DESC
                        # VCLReachability
