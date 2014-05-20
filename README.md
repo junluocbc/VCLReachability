@@ -76,7 +76,7 @@ Add `VCLReachabilitySubscriber.h` to the class you which to become a reachabilit
 ```objective-c
 #import "VCLReachabilitySubscriber.h"
 ```
-Implement the protcol method
+Implement the protocol method
 
 ```objective-c
 - (void)reachabilityChanged:(NSNotification *)note{...}
@@ -87,7 +87,7 @@ Implement the protcol method
 
 For example....
 
-``objective-c
+```objective-c
 - (void)reachabilityChanged:(NSNotification *)note
 {
     VCLReachability* curReach = [note object];
@@ -133,7 +133,7 @@ For example...
 ```
 
 ## ChangeLog
-refer to the [releases](https://github.com/VerticodeLabs/VCLReachability/releases) section for a detailed ChangeLog
+Refer to the [releases](https://github.com/VerticodeLabs/VCLReachability/releases) section for a detailed ChangeLog
 
 <!-- ## Documentation
 
