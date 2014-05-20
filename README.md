@@ -33,6 +33,7 @@ Four quick start options are available:
 - Clone the repo and use the example project: 
 ```bash
 git@github.com:VerticodeLabs/VCLReachability.git
+pod install
 ```
 
 - Install with [Cocoapods](http://cocoapods.org/) by adding VCLReachability to your Podfile.
