@@ -334,7 +334,7 @@
 		};
 		97A3CD2E192BE9D800718BF1 /* Install and update pods */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -344,7 +344,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "pod install\ncd \"${SRCROOT}/VCLReachability/\" & pod install";
+			shellScript = "PATH=$(bash -l -c 'echo $PATH')\necho \"Setting UTF-8 encoding\"\nexport LC_ALL=\"en_US.UTF-8\"\necho \"Installing Pods for ${TARGET_NAME}\"\npod install";
 		};
 		C3EB151687584C91B2CF23A5 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
