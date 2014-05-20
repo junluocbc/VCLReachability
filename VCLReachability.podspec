@@ -55,6 +55,7 @@ Pod::Spec.new do |s|
                         - Initial release
                        DESC
   s.homepage         = "https://github.com/VerticodeLabs/VCLReachability"
+  s.documentation_url= 'https://github.com/VerticodeLabs/VCLReachability/blob/master/README.md'
   s.license          = 'MIT'
   s.author           = { "adrianmaurer" => "adrian@verticodelabs.com" }
   s.source           = { :git => "https://github.com/VerticodeLabs/VCLReachability.git", :tag => "1.0.1" }
@@ -63,7 +64,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  s.source_files = 'Classes/**/*.{h,m}' 
+  s.source_files = 'Classes/**/*.{h,m}'
 
   s.ios.exclude_files = 'Classes/osx'
   s.osx.exclude_files = 'Classes/ios'
