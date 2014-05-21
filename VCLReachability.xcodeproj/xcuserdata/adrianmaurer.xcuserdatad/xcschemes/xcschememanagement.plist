@@ -3,9 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
+	<dict>
+		<key>PreBotSetup.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>97672EDA192CF493006410FD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>97672EE7192CF493006410FD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>97DB93A619250E5300F94594</key>
 		<dict>
 			<key>primary</key>
