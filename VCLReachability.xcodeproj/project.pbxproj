@@ -533,6 +533,7 @@
 				GCC_PREFIX_HEADER = "Example/VCLReachability-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Example/VCLReachability-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -548,6 +549,7 @@
 				GCC_PREFIX_HEADER = "Example/VCLReachability-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Example/VCLReachability-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
