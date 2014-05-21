@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		587AB8E708A14962BFAE2E21 /* libPods-VCLReachability.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BF9B15A1DF473C8E5A7A59 /* libPods-VCLReachability.a */; };
-		97672EDC192CF493006410FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DB93AA19250E5300F94594 /* Foundation.framework */; };
-		97672EE1192CF493006410FD /* PreBotSetup.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 97672EE0192CF493006410FD /* PreBotSetup.h */; };
-		97672EE3192CF493006410FD /* PreBotSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 97672EE2192CF493006410FD /* PreBotSetup.m */; };
 		97DB93AB19250E5300F94594 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DB93AA19250E5300F94594 /* Foundation.framework */; };
 		97DB93AD19250E5300F94594 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DB93AC19250E5300F94594 /* CoreGraphics.framework */; };
 		97DB93AF19250E5300F94594 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DB93AE19250E5300F94594 /* UIKit.framework */; };
@@ -33,13 +30,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		97672EFE192CF537006410FD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 97DB939F19250E5300F94594 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 97672EDA192CF493006410FD;
-			remoteInfo = PreBotSetup;
-		};
 		97DB93D019250E5300F94594 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 97DB939F19250E5300F94594 /* Project object */;
@@ -49,23 +39,9 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		97672ED9192CF493006410FD /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				97672EE1192CF493006410FD /* PreBotSetup.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		71BF9B15A1DF473C8E5A7A59 /* libPods-VCLReachability.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VCLReachability.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7205136DDCF5473C87A28082 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		97672EDB192CF493006410FD /* libPreBotSetup.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPreBotSetup.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		97672EDF192CF493006410FD /* PreBotSetup-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PreBotSetup-Prefix.pch"; sourceTree = "<group>"; };
 		97672EE0192CF493006410FD /* PreBotSetup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreBotSetup.h; sourceTree = "<group>"; };
 		97672EE2192CF493006410FD /* PreBotSetup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreBotSetup.m; sourceTree = "<group>"; };
@@ -108,14 +84,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		97672ED8192CF493006410FD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				97672EDC192CF493006410FD /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		97DB93A419250E5300F94594 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,7 +170,6 @@
 			children = (
 				97DB93A719250E5300F94594 /* VCLReachability.app */,
 				97DB93CB19250E5300F94594 /* VCLReachabilityTests.xctest */,
-				97672EDB192CF493006410FD /* libPreBotSetup.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -297,24 +264,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		97672EDA192CF493006410FD /* PreBotSetup */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 97672EF7192CF493006410FD /* Build configuration list for PBXNativeTarget "PreBotSetup" */;
-			buildPhases = (
-				97672EFD192CF4AC006410FD /* ShellScript */,
-				97672ED7192CF493006410FD /* Sources */,
-				97672ED8192CF493006410FD /* Frameworks */,
-				97672ED9192CF493006410FD /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PreBotSetup;
-			productName = PreBotSetup;
-			productReference = 97672EDB192CF493006410FD /* libPreBotSetup.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		97DB93A619250E5300F94594 /* VCLReachability */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97DB93DC19250E5300F94594 /* Build configuration list for PBXNativeTarget "VCLReachability" */;
@@ -328,7 +277,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				97672EFF192CF537006410FD /* PBXTargetDependency */,
 			);
 			name = VCLReachability;
 			productName = VCLReachability;
@@ -383,7 +331,6 @@
 			targets = (
 				97DB93A619250E5300F94594 /* VCLReachability */,
 				97DB93CA19250E5300F94594 /* VCLReachabilityTests */,
-				97672EDA192CF493006410FD /* PreBotSetup */,
 			);
 		};
 /* End PBXProject section */
@@ -428,19 +375,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		97672EFD192CF4AC006410FD /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"$USER\" == \"cbcbuild\" || \"$USER\" == \"_teamserver\" ]; then\necho \"Running PreBotsStep\"\n./scripts/setup.sh --not-interactive\ncd $SRCROOT\nelse\necho \"Username: $USERNAME\"\necho \"Not on Bots Server, skipping PreBotsStep\"\nfi";
-		};
 		C3EB151687584C91B2CF23A5 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -459,14 +393,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		97672ED7192CF493006410FD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				97672EE3192CF493006410FD /* PreBotSetup.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		97DB93A319250E5300F94594 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -490,11 +416,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		97672EFF192CF537006410FD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 97672EDA192CF493006410FD /* PreBotSetup */;
-			targetProxy = 97672EFE192CF537006410FD /* PBXContainerItemProxy */;
-		};
 		97DB93D119250E5300F94594 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 97DB93A619250E5300F94594 /* VCLReachability */;
@@ -530,36 +451,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		97672EF8192CF493006410FD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DSTROOT = /tmp/PreBotSetup.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PreBotSetup/PreBotSetup-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		97672EF9192CF493006410FD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DSTROOT = /tmp/PreBotSetup.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PreBotSetup/PreBotSetup-Prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		97DB93DA19250E5300F94594 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -703,14 +594,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		97672EF7192CF493006410FD /* Build configuration list for PBXNativeTarget "PreBotSetup" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				97672EF8192CF493006410FD /* Debug */,
-				97672EF9192CF493006410FD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		97DB93A219250E5300F94594 /* Build configuration list for PBXProject "VCLReachability" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
