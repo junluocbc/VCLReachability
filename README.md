@@ -110,7 +110,7 @@ The VCLReachabilitySubscriber protocol methods will aready be filled in. By defa
 
 #### Subscribe to Network Events
 
-The following methods are used to subscribe to differente reachability events.
+The following methods are used to subscribe to different reachability events.
 
 ```objective-c
 /*!
