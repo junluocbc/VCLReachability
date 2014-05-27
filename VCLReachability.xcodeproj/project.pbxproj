@@ -45,12 +45,6 @@
 		71BF9B15A1DF473C8E5A7A59 /* libPods-VCLReachability.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VCLReachability.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7205136DDCF5473C87A28082 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9747AFE11933B3CF00BBFFAB /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		97672EDF192CF493006410FD /* PreBotSetup-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PreBotSetup-Prefix.pch"; sourceTree = "<group>"; };
-		97672EE0192CF493006410FD /* PreBotSetup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreBotSetup.h; sourceTree = "<group>"; };
-		97672EE2192CF493006410FD /* PreBotSetup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreBotSetup.m; sourceTree = "<group>"; };
-		97672EF1192CF493006410FD /* PreBotSetupTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PreBotSetupTests-Info.plist"; sourceTree = "<group>"; };
-		97672EF3192CF493006410FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		97672EF5192CF493006410FD /* PreBotSetupTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreBotSetupTests.m; sourceTree = "<group>"; };
 		97DB93A719250E5300F94594 /* VCLReachability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCLReachability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DB93AA19250E5300F94594 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		97DB93AC19250E5300F94594 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -110,42 +104,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		97672EDD192CF493006410FD /* PreBotSetup */ = {
-			isa = PBXGroup;
-			children = (
-				97672EE0192CF493006410FD /* PreBotSetup.h */,
-				97672EE2192CF493006410FD /* PreBotSetup.m */,
-				97672EDE192CF493006410FD /* Supporting Files */,
-			);
-			path = PreBotSetup;
-			sourceTree = "<group>";
-		};
-		97672EDE192CF493006410FD /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				97672EDF192CF493006410FD /* PreBotSetup-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		97672EEF192CF493006410FD /* PreBotSetupTests */ = {
-			isa = PBXGroup;
-			children = (
-				97672EF5192CF493006410FD /* PreBotSetupTests.m */,
-				97672EF0192CF493006410FD /* Supporting Files */,
-			);
-			path = PreBotSetupTests;
-			sourceTree = "<group>";
-		};
-		97672EF0192CF493006410FD /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				97672EF1192CF493006410FD /* PreBotSetupTests-Info.plist */,
-				97672EF2192CF493006410FD /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		97DB939E19250E5300F94594 = {
 			isa = PBXGroup;
 			children = (
@@ -153,8 +111,6 @@
 				97DB93EB19250ECD00F94594 /* Classes */,
 				97DB93EE19250ECD00F94594 /* Example */,
 				97DB93D219250E5300F94594 /* Tests */,
-				97672EDD192CF493006410FD /* PreBotSetup */,
-				97672EEF192CF493006410FD /* PreBotSetupTests */,
 				97DB93A919250E5300F94594 /* Frameworks */,
 				97DB93A819250E5300F94594 /* Products */,
 				97DB93F019250ECD00F94594 /* LICENSE */,
@@ -426,14 +382,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		97672EF2192CF493006410FD /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				97672EF3192CF493006410FD /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		97DB93E619250EB800F94594 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
