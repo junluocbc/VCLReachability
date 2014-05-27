@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		60B564C9AF6E47EF8846464C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Example/Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		60B564C9AF6E47EF8846464C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		7205136DDCF5473C87A28082 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DB93A719250E5300F94594 /* VCLReachability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCLReachability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DB93AA19250E5300F94594 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -341,7 +341,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Example/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -499,6 +499,7 @@
 		};
 		97DB93E019250E5300F94594 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60B564C9AF6E47EF8846464C /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VCLReachability.app/VCLReachability";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -521,6 +522,7 @@
 		};
 		97DB93E119250E5300F94594 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60B564C9AF6E47EF8846464C /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VCLReachability.app/VCLReachability";
 				FRAMEWORK_SEARCH_PATHS = (
