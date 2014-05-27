@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		587AB8E708A14962BFAE2E21 /* libPods-VCLReachability.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BF9B15A1DF473C8E5A7A59 /* libPods-VCLReachability.a */; };
 		6F89301FEA414A8BB24D18D6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7205136DDCF5473C87A28082 /* libPods.a */; };
 		97DB93AB19250E5300F94594 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DB93AA19250E5300F94594 /* Foundation.framework */; };
 		97DB93AD19250E5300F94594 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97DB93AC19250E5300F94594 /* CoreGraphics.framework */; };
@@ -86,7 +85,6 @@
 				97DB93AD19250E5300F94594 /* CoreGraphics.framework in Frameworks */,
 				97DB93AF19250E5300F94594 /* UIKit.framework in Frameworks */,
 				97DB93AB19250E5300F94594 /* Foundation.framework in Frameworks */,
-				587AB8E708A14962BFAE2E21 /* libPods-VCLReachability.a in Frameworks */,
 				6F89301FEA414A8BB24D18D6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
