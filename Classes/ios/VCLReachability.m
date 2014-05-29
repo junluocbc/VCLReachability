@@ -101,10 +101,6 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
     VCLReachability* noteObject = (__bridge VCLReachability *)info;
     // Post a notification to notify the client that the network reachability changed.
     [[NSNotificationCenter defaultCenter] postNotificationName: [noteObject notificationType] object: noteObject];
-    
-    if ([noteObject notificationType] == kInternetReachabilityChangedNotification) {
-        [[NSNotificationCenter defaultCenter] postNotificationName: kReachabilityChangedNotification object: noteObject];
-    }
 }
 
 
@@ -164,6 +160,22 @@ static NSMutableDictionary* _hostNames;
 	return returnValue;
 }
 
+
++ (instancetype)reachabilityAlways
+{
+	struct sockaddr_in zeroAddress;
+	bzero(&zeroAddress, sizeof(zeroAddress));
+	zeroAddress.sin_len = sizeof(zeroAddress);
+	zeroAddress.sin_family = AF_INET;
+    
+    VCLReachability* returnValue = [self reachabilityWithAddress: &zeroAddress];
+    if (returnValue != NULL)
+	{
+        returnValue->_notificationType = kReachabilityChangedNotification;
+	}
+    
+	return returnValue;
+}
 
 
 + (instancetype)reachabilityForInternetConnection
@@ -343,7 +355,7 @@ static NSMutableDictionary* _hostNames;
 /* Static version for checks without subscribing */
 + (NetworkStatus)currentReachabilityStatus
 {
-    _alwaysReachability = [VCLReachability createOrReturnReachabilityWithReachability:_alwaysReachability forReachabilityConnection:[VCLReachability reachabilityForInternetConnection]];
+    _alwaysReachability = [VCLReachability createOrReturnReachabilityWithReachability:_alwaysReachability forReachabilityConnection:[VCLReachability reachabilityAlways]];
     
 	NSAssert(_alwaysReachability->_reachabilityRef != NULL, @"currentNetworkStatus called with NULL SCNetworkReachabilityRef");
 	NetworkStatus returnValue = NotReachable;
@@ -376,7 +388,14 @@ static NSMutableDictionary* _hostNames;
  Observe the kNetworkReachabilityChangedNotification. When that notification is posted, the method reachabilityChanged will be called.
  */
 + (void)subscribeToReachabilityNotificationsWithDelegate:(id<VCLReachabilitySubscriber>) delegate {
+    
+    // If an instance of _alwaysReachability isn't created yet create one
+    _alwaysReachability = [VCLReachability createOrReturnReachabilityWithReachability:_alwaysReachability forReachabilityConnection:[VCLReachability reachabilityAlways]];
+
     [[NSNotificationCenter defaultCenter] addObserver:delegate selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+
+    // send the first notification
+    [VCLReachability postNotificationTo:kReachabilityChangedNotification withReachability:_alwaysReachability];
 }
 
 

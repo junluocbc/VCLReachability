@@ -9,7 +9,7 @@
 
 @class VCLReachability;
 
-@protocol VCLReachabilitySubscriber
+@protocol VCLReachabilitySubscriber <NSObject>
 
 /*
  * Recieve change in network events
